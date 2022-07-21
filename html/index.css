@@ -150,9 +150,30 @@ body{
 }
 
 
-
-
-
+.ds{
+  display: flex;
+  flex-direction:column; 
+  align-items:center;
+}
+.imgproduto{
+  height:150px;
+  margin: 15px;
+}
+.secproduto{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.descproduto{
+  font-size:25px;
+  color:rgb(75, 75, 75)
+}
+.preçoproduto{
+  font-size:20px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
 
 
 
@@ -167,79 +188,92 @@ body{
 
 /*SLIDE*/
 .card {
-    position: relative;
-    border: 0.5px solid black;
-    width: 1000px;
-    height: 444px;
-    overflow: hidden;
+  position: relative;
   
-    border-radius: 5px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-  }
+  width: 1000px;
+  height: 385px;
+  overflow: hidden;
+
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/*Light blue cover above the slide show*/
+.card::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 900;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(140, 22, 115, 0.2);
+}
+
+.card_part {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 7;
+
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
   
-  /*Light blue cover above the slide show*/
-  .card::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 900;
+  transform: translateX( 700px );
+  background-image: url(slide/imagem1.jpg );
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
   
-    display: block;
-    width: 100%;
-    height: 100%;
-  
-    background-color: rgba(140, 22, 115, 0.2);
-  }
-  
-  .card_part {
-    position: absolute;
-    top:0; 
-    left: 0;
-    z-index: 7;
-  
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    
-    transform: translateX( 1000px );
-    background-image: url(slide/imagem1.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    
-    animation: opaqTransition 28s cubic-bezier(0, 0, 0, 0.97) infinite;
-  }
-  
-  
-  .card_part.card_part-two {
-    z-index: 6;
-    background-image: url(slide/imagem2.jpg );
-    animation-delay: 7s;
-  }
-  
-  .card_part.card_part-three {
-    z-index: 5;
-    background-image: url(slide/imagem3.jpg );
-    animation-delay: 14s;
-  }
-  
-  .card_part.card_part-four {
-    z-index: 4;
-    background-image: url(slide/imagem4.jpg );
-    animation-delay: 21s;
-  }
-  @keyframes opaqTransition {
-    3% { transform: translateX( 0 ); }
-    25% { transform: translateX( 0 ); }
-    28% { transform: translateX( -700px ); }
-    100% { transform: translateX( -700px ); }
-  }
+  animation: opaqTransition 28s cubic-bezier(0, 0, 0, 0.97) infinite;
+}
+
+
+.card_part.card_part-two {
+  z-index: 6;
+  background-image: url(slide/imagem2.jpg );
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation-delay: 7s;
+}
+
+.card_part.card_part-three {
+  z-index: 5;
+  background-image: url(slide/imagem3.jpg );
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation-delay: 14s;
+}
+
+.card_part.card_part-four {
+  z-index: 4;
+  background-image: url(slide/imagem4.jpg );
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation-delay: 21s;
+}
+
+
+@keyframes opaqTransition {
+  3% { transform: translateX( 0 ); }
+  25% { transform: translateX( 0 ); }
+  28% { transform: translateX( -1000px ); }
+  100% { transform: translateX( -1000px ); }
+}
 
 /*part second*/
 .ds{
   height: 300px;
   border: 0.5px solid #d7d7d7;
+  background-color: #fff;
 }
 .sectionprotutos1{
   display: flex;
@@ -257,6 +291,8 @@ body{
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   cursor: pointer;
+  color: white;
+  background-color: black;
 }
 .topprodutos{
   background-color: red;
