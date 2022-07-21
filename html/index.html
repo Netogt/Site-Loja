@@ -11,92 +11,107 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
     <title>PowerFit</title>
-    <style>
-        .ds{
-            background-color: red;
-            height: 50px;
-            border: 1px solid black;
-        }
-        .container{
-            align-items: center;
-        }
-    </style>
+   
 </head>
 <body>
-    <header>
-        <span><img src="imagens/bandeirabr.png" alt="">PORTUGUES BR</span>
-        <section>
-            <div><img src="imagens/coração.png" alt="">FAVORITOS</div>
-            <div><img src="imagens/logar.png" alt="">FAZER LOGIN</div>
-            <div><img src="imagens/cadastra.png" alt="">CADASTRAR</div>
+    <header class="topsite">
+        <div class="idioma"><img class="icontop" src="imagens/bandeirabr.png" alt=""> <span >PORTUGUES BR</span></div>
+        <section class="buttonstop">
+            <div class="butonschaild"><img class="icontop" src="imagens/coração.png" alt="">FAVORITOS</div>
+            <div class="butonschaild"><img class="icontop" src="imagens/logar.png" alt="">FAZER LOGIN</div>
+            <div class="butonschaild"><img class="icontop" src="imagens/cadastra.png" alt="">CADASTRAR</div>
         </section>
-        <section>
-            <img src="imagens/carrinho.png" alt="" >
+        <section class="carrinhoconpras">
+            <img class="icontop" src="imagens/carrinho.png" alt="" >
             <span>MEU CARRINHO R$ 00</span>
         </section>
-        <main>
-            <section>
-                <img src="imagens/logo.png" alt="">
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <input type="search" name="pesquisar" id="pesqui">
-            </section>
-            <section>
-                <div>
+    </header>
+    <main>
+        <section class="top2">
+            <img class="imglogost" src="imagens/logo.png" alt="">
+            <ul class="listatop2">
+                <li>INICIO</li>
+                <li>SOBRE NOS</li>
+                <li>PRODUTOS</li>
+                <li>CATEGORIAS</li>
+                <li>FALE CONOSCO</li>
+            </ul>
+            <form class="caixadepesquisa" id="caixadepesquisa" action="buscar.php" method="Get">               
+                <input class="inputpes" type="search" placeholder="Pesquise" id="pesquisa" name="pesquisa">
+                <label for="pesquisa"><button type="submit" style="font-size: 20px; cursor:pointer; border:none; background-color:#fff" class="bi bi-search"></button></label>
+            </form>
+        </section>
+        <section class="sectionmain">
+            <div class="divcateg">
+                <div class="topcard">
                     <i class="bi bi-list-ul"></i>
-                    <span>TOP GATEGORIAS</span>
+                    <span>TOP CATEGORIAS</span>
                 </div>
-                <ul>
-                    <li>APARELHOS</li>
-                    <li>CREATINA</li>
-                    <li>EQUIPAMENTOS</li>
-                    <li>HIPERCALORICO</li>
-                    <li>MULTIVITAMINICO</li>
-                    <li>PRE-TREINO</li>
-                    <li>ROUPAS</li>
-                    <li>WHEYPROTEIN</li>
-                </ul>
+                <div class="div-itens">
+                    <div class="itens-categ1">APARELHOS</div>
+                    <div class="itens-categ2">CREATINA</div>
+                    <div class="itens-categ1">EQUIPAMENTOS</div>
+                    <div class="itens-categ2">HIPERCALORICO</div>
+                    <div class="itens-categ1">MULTIVITAMINICO</div>
+                    <div class="itens-categ2">PRE-TREINO</div>
+                    <div class="itens-categ1">ROUPAS</div>
+                    <div class="itens-categ2">WHEY-PROTEIN</div>
+                </div>
+            </div>
+            <div class="divslide1">
                 <div class="card">
-  
                     <div class="card_part card_part-one">
                     </div>
-                    
-                     <!-- Photo 2 -->
+                
+                        <!-- Photo 2 -->
                     <div class="card_part card_part-two">
-                  
+                
                     </div>
-                  
+                
                     <!-- Photo 3 -->
                     <div class="card_part card_part-three">
                     </div>
-                  
+                
                     <!-- Photo 4 -->
                     <div class="card_part card_part-four">
                     </div>
-                  
-                  </div>
-            </section>
-            <section>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-2 ds">1</div>
-                        <div class="col-2 ds">2</div>
-                        <div class="col-2 ds">3</div>
-                        <div class="col-2 ds">4</div>
-                        <div class="col-2 ds">5</div>
-                    </div>
-                 
+                
                 </div>
-            </section>
-            <section></section>
-        </main>
-    </header>
-
+            </div>
+        </section>
+        <section class="sectionprotutos1">
+            <div class="container">
+                <div class="row">
+                    <div class="col ds" style="display: flex; flex-direction:column; align-items:center">
+                        <img style="height:150px; margin: 15px;" src="imagens/hipercalorico.jpg" alt="">
+                        <section style="display: flex; flex-direction:column; align-items:flex-start;width: 100%;">
+                            <h1 style="font-size:25px; color:rgb(75, 75, 75)">Hipercalorico</h1>
+                            <span style="font-size:20px; margin-bottom: 5px;font-weight: bold;;">R$ 40,00</span>
+                            <span>10 vendidos</span>
+                        </section>
+                    </div>
+                    <div class="col ds">2</div>
+                    <div class="col ds">3</div>
+                    <div class="col ds">4</div>
+                    <div class="col ds">5</div>
+                </div>
+            </div>
+            <div class="mostmais">Mostrar Mais</div>
+        </section>
+        <section>
+            <div style="display: flex;position: relative; margin-bottom:10px;">
+                <div class="topprodutos">TOP PRODUTOS</div>
+                <div style="background-color:#F0F0F0; height: 25px;width: 100%;position: absolute; z-index: -1;bottom:0px;"></div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col ds">1</div>
+                    <div class="col ds">2</div>
+                    <div class="col ds">3</div>
+                    <div class="col ds">4</div>
+                </div>
+        </section>
+    </main>
 
 
 
